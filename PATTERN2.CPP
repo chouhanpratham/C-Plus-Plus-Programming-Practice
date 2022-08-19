@@ -1,6 +1,7 @@
 #include<conio.h>
 #include<iostream.h>
 void main()
+ //Here we are using th efor loop to print the pattern
 {
  int i,j;
  clrscr();
