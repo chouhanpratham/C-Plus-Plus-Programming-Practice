@@ -1,6 +1,7 @@
 #include<conio.h>
 #include<iostream.h>
 void main()
+//Here we are using the cout and cin object to find the greatest of three numbers 
 {
  int a,b,c;
  cout<<"Enter the elements"<<endl;
