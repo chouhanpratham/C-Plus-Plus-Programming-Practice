@@ -2,6 +2,8 @@
 #include<iostream.h>
 #include<stdio.h>
 void main()
+ //Here we are using the for loop to print the pattern of inverted triangle
+ //We are taking the input of number from the user and using it in for loop for rows 
 {
  int i,j,rows,k;
  clrscr();
