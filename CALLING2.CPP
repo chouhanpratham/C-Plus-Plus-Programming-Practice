@@ -1,6 +1,7 @@
 #include<conio.h>
 #include<iostream.h>
-//Here we are undestanding the  function call
+//Here we are undestanding the object pointer usage
+//We are using the pointer to call the member function
 class Box
 {
  private:
@@ -18,8 +19,8 @@ class Box
 void main()
 {
  clrscr();
- Box smallBox;
- smallBox.setDimension(12,10,5);
- smallBox.showDimension();
+ Box *p,smallBox;
+ p->setDimension(12,10,5);  //Pointer calling the member function
+ p->showDimension();        //Arrow operator
  getch();
 }
