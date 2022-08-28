@@ -1,15 +1,16 @@
 #include<conio.h>
 #include<iostream.h>
-//Here we are undestanding the object pointer usage
+//Here we are undestanding the object pointer and this pointer usage
 //We are using the pointer to call the member function
+//We are using this pointer to solve the name conflict that arise whrn we use the same local variable and instance member variable
 class Box
 {
  private:
  int l,b,h;
  public:
- void setDimension(int x,int y,int z)
+ void setDimension(int l,int b,int h)
  {
-  l=x;b=y;h=z;
+  this->l=l;this->b=b;this->h=h;
  }
  void showDimension()
  {
