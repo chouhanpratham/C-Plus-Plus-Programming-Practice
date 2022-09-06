@@ -1,18 +1,19 @@
 #include<conio.h>
 #include<iostream.h>
 void main()
- //Here we are using th efor loop to print the pattern
 {
- int i,j;
  clrscr();
- cout<<"The Pattern is"<<endl;
- for(i=1;i<=5;i++)
+ int i,j,n;
+ cout<<"Enter the numbers of rows:"<<endl;
+ cin>>n;
+ for(i=1;i<=n;i++)
  {
   for(j=1;j<=i;j++)
- {
-  cout<<"*";
- }
- cout<<endl;
+  {
+   cout<<"*";
+  }
+   cout<<endl;
  }
  getch();
 }
+
