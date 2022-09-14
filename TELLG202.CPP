@@ -5,17 +5,11 @@ void main()
 {
  clrscr();
  ifstream fin;
- char ch;
  fin.open("abc.txt");
- int pos;
- pos=fin.tellg();
- cout<<pos;
- fin>>ch;
- pos=fin.tellg();
- cout<<pos;
- fin>>ch;
- pos=fin.tellg();
- cout<<pos;
+ cout<<fin.tellg();
+ cout<<"\n"<<(char)fin.get();
+ cout<<(char)fin.get();
+ cout<<"\n"<<fin.tellg();
  getch();
 }
 
