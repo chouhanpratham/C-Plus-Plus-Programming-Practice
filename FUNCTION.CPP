@@ -1,27 +1,29 @@
-#include <iostream>
-#include <cstdio>
-using namespace std;
-//Functions are a bunch of statements glued together. A function is provided with zero or more arguments, and it executes the statements on it. Based on the return type, it either returns nothing (void) or something.
-/*
-Add `int max_of_four(int a, int b, int c, int d)` here.
-*/
-int max_of_four(int a,int b,int c,int d)
+#include<conio.h>
+#include<iostream.h>
+int area(int,int);
+float area(int);
+void main()
+//Here we are using the concept of function overloading
+//We are using two function with same name to calculate the area of circle and rectangle
 {
-    if(a>b && a>c && a>d)
-    return a;
-    else if(b>c && b>d)
-    return b;
-    else if (c>d)
-    return c;
-    else 
-    return d;
+ clrscr();
+ int r;
+ cout<<"Enter the radius of the circle"<<endl;
+ cin>>r;
+ float A=area(r);
+ cout<<"Area of circle is "<<A<<endl;
+ int l,b,a;
+ cout<<"Enter the length and breadth of recatangle\n";
+ cin>>l>>b;
+ a=area(l,b);
+ cout<<"Area of rectangle is "<<a;
+ getch();
 }
-
-int main() {
-    int a, b, c, d;
-    scanf("%d %d %d %d", &a, &b, &c, &d);
-    int ans = max_of_four(a, b, c, d);
-    printf("%d", ans);
-    
-    return 0;
+int area(int L,int B)
+{
+ return(L*B);
+}
+float area(int R)
+{
+ return(3.14*R*R);
 }
