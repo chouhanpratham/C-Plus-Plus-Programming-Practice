@@ -1,17 +1,44 @@
-#include <iostream>
-#include <string>
-using namespace std;
-//C++ provides a nice alternative data type to manipulate strings, and the data type is conveniently called string. Some of its widely used features are the following:
-int main() {
-	// Complete the program
-   string a ,b;
-   cin>>a>>b;
-   cout<<a.size()<<" "<<b.size()<<endl;
-   cout<<a+b<<endl;
-   char t1=a[0];
-   char t2=b[0];
-   a[0]=t2;
-   b[0]=t1;
-   cout<<a<<" "<<b;
-    return 0;
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+class String
+{
+ private:
+ char name[50];
+ public:
+ void getdata()
+ {
+  cout<<"Enter the String:";
+  cin>>name;
+ }
+ void display()
+ {
+  cout<<"String is: "<<name<<endl;
+ }
+  int operator ==(String a)
+ {
+  if(!strcmp(name,a.name))
+  return 1;
+  return 0;
+ }
+ String operator+(String x)
+ {
+  strcat(name,x.name);
+  strcpy(x.name,name);
+  return x;
+ }
+};
+void main()
+{
+ clrscr();
+ String a,b,c;
+ a.getdata();
+ b.getdata();
+ if(a==b)
+  cout<<"String matched"<<endl;
+  else
+  cout<<"String not matched"<<endl;
+ c=a+b;
+ c.display();
+ getch();
 }
