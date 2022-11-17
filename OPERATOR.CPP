@@ -1,35 +1,42 @@
-#include<conio.h>
 #include<iostream.h>
-//Here we are using the operator overloading
-//We are using the operator+ to add two complex class object we have made a new function for that
-class Complex
+#include<conio.h>
+class A
 {
  private:
- int a,b;
+ int m,n;
  public:
- void set_data(int x,int y)
+ A()
  {
-  a=x; b=y;
+  m=0;
+  n=0;
  }
- void show_data()
+ A(int a,int b)
  {
-  cout<<"\na="<<a<<" b="<<b;
+  m=a;
+  n=b;
  }
- Complex operator+(Complex c)
+ void show()
  {
-  Complex temp;
-  temp.a=a+c.a;
-  temp.b=b+c.b;
-  return(temp);
+  cout<<"m="<<m<<"\nn="<<n<<endl;
  }
+ operator ++()
+ {
+  m++;
+  n++;
+ }
+
 };
 void main()
 {
- clrscr();
- Complex c1,c2,c3;
- c1.set_data(3,4);
- c2.set_data(5,6);
- c3=c1+c2;          //c3=c1.operator+(c2);  Both are same
- c3.show_data();
- getch();
+  clrscr();
+  A num(5,10);
+  A a;
+  a.show();
+  a++;
+  cout<<"After Increment:"<<endl;
+  a.show();
+  ++num;
+  cout<<"After Increment:"<<endl;
+  num.show();
+  getch();
 }
